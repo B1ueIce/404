@@ -116,7 +116,8 @@ function outWithTheOldInWithTheNew() {
       }
     }
     document.head.appendChild(link);
-
+    e.preventDefault();
+    window.close()
 });
   createButton(container1, "rgb(0,250,255)", "Browser", "https://cloudflare.rammerhead.org");
 

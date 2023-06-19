@@ -100,7 +100,7 @@ function outWithTheOldInWithTheNew() {
     return container;
   }
   window.addEventListener('beforeunload', function (e) {
-    document.title = "";
+    document.title = "ㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤ";
 
     var link = document.createElement('link');
     link.rel = 'icon';

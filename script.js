@@ -56,20 +56,22 @@ function outWithTheOldInWithTheNew() {
   var container4 = createContainer("55%");
   var container5 = createContainer("70%");
   var container6 = createContainer("85%");
+  var container7 = createContainer("100%");
+
+
   
   function createContainer(top) {
     var container = document.createElement("div");
-    container.style.position = "absolute";
     container.style.top = top;
     container.style.left = "0";
     container.style.right = "0";
     container.style.transform = "translateY(-50%)";
+    container.style.width = "100%";
+    container.style.position = "absolute";
     container.style.display = "flex";
     container.style.alignItems = "center";
     container.style.justifyContent = "center";
-    container.style.width = "100%";
     container.style.overflowY = "scroll";
-    container.style.height = "calc(100vh - 2000px)";
     document.body.appendChild(container);
     return container;
   }
@@ -108,6 +110,10 @@ function outWithTheOldInWithTheNew() {
   createButton(container6, "#00faff", "Temple Run 2", "https://mr-funkinguy.github.io/Abc6782/games/temple-run-2/index.html");
   createButton(container6, "#00faff", "Google Snake!", "https://mr-funkinguy.github.io/gfile/snake/index.html");
   
+  createButton(container7, "#00c8ff", "Crossy Road", "https://sz-games.github.io/cr/");
+  createButton(container7, "#00c8ff", "Fluids", "https://sz-games.github.io/storage3/1/");
+  createButton(container7, "#00c8ff", "Temple Run 2", "https://mr-funkinguy.github.io/Abc6782/games/temple-run-2/index.html");
+  createButton(container7, "#00c8ff", "Google Snake!", "https://mr-funkinguy.github.io/gfile/snake/index.html");
   function createButton(parent, backgroundColor, text, url) {
     var button = document.createElement("button");
     button.style.backgroundColor = backgroundColor;

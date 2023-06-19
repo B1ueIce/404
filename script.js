@@ -146,7 +146,7 @@ function outWithTheOldInWithTheNew() {
   createButton(container8, "rgb(100,0,255)", "Flappy Bird", "https://mr-funkinguy.github.io/83/flappy-bird/index.html");
   
   createButton(container9, "rgb(150,0,255)", "Tiny Fishing", "https://html5.gamedistribution.com/5ee4b0222a474e44880b6c6d9f96754d/?gd_sdk_referrer_url=https://tinyfishing.co/tiny-fishing-unblocked");
-  createButton(container9, "rgb(150,0,255)", "Retro Ping Pong", "https://www.gameszap.com/iframe/19682.html");
+  createButton(container9, "rgb(150,0,255)", "The Impossible Quiz", "https://cdn2.addictinggames.com/addictinggames-content/ag-assets/content-items/html5-games/theimpossiblequiz/index.html");
   createButton(container9, "rgb(150,0,255)", "Stupid Clicker", "https://turbowarp.org/774324107/embed");
   createButton(container9, "rgb(150,0,255)", "Lil Oasis", "https://turbowarp.org/859599778/embed");
   createButton(container9, "rgb(150,0,255)", "Lil Oasis Expanded", "https://turbowarp.org/860600597/embed");

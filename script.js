@@ -28,7 +28,7 @@ function stage2() {
   
 }
 function clear() {
-  document.body.style.overflow = ""; // Unlock scroll wheel
+  document.body.style.overflow = "";
   var body = document.body;
   var childNodes = body.childNodes;
   for (var i = childNodes.length - 1; i >= 0; i--) {
@@ -47,82 +47,32 @@ function outWithTheOldInWithTheNew() {
       body.removeChild(node);
     }
   }
+
+  document.body.style.backgroundColor = "#444444";
+
+  var container1 = createContainer("10%");
+  var container2 = createContainer("25%");
+  var container3 = createContainer("40%");
+  var container4 = createContainer("55%");
+  var container5 = createContainer("70%");
+  var container6 = createContainer("85%");
   
-  // Change background to a darker shade
-  document.body.style.backgroundColor = "#333333";
-  
-  // Create buttons
-  var container1 = document.createElement("div");
-  container1.style.position = "fixed";
-  container1.style.top = "10%";
-  container1.style.left = "0";
-  container1.style.right = "0";
-  container1.style.transform = "translateY(-50%)";
-  container1.style.display = "flex";
-  container1.style.alignItems = "center";
-  container1.style.justifyContent = "center";
-  container1.style.width = "100%";
-  document.body.appendChild(container1);
-
-  var container2 = document.createElement("div");
-  container2.style.position = "fixed";
-  container2.style.top = "25%";
-  container2.style.left = "0";
-  container2.style.right = "0";
-  container2.style.transform = "translateY(-50%)";
-  container2.style.display = "flex";
-  container2.style.alignItems = "center";
-  container2.style.justifyContent = "center";
-  container2.style.width = "100%";
-  document.body.appendChild(container2);
-
-  var container3 = document.createElement("div");
-  container3.style.position = "fixed";
-  container3.style.top = "40%";
-  container3.style.left = "0";
-  container3.style.right = "0";
-  container3.style.transform = "translateY(-50%)";
-  container3.style.display = "flex";
-  container3.style.alignItems = "center";
-  container3.style.justifyContent = "center";
-  container3.style.width = "100%";
-  document.body.appendChild(container3);
-
-  var container4 = document.createElement("div");
-  container4.style.position = "fixed";
-  container4.style.top = "55%";
-  container4.style.left = "0";
-  container4.style.right = "0";
-  container4.style.transform = "translateY(-50%)";
-  container4.style.display = "flex";
-  container4.style.alignItems = "center";
-  container4.style.justifyContent = "center";
-  container4.style.width = "100%";
-  document.body.appendChild(container4);
-
-  var container5 = document.createElement("div");
-  container5.style.position = "fixed";
-  container5.style.top = "70%";
-  container5.style.left = "0";
-  container5.style.right = "0";
-  container5.style.transform = "translateY(-50%)";
-  container5.style.display = "flex";
-  container5.style.alignItems = "center";
-  container5.style.justifyContent = "center";
-  container5.style.width = "100%";
-  document.body.appendChild(container5);
-
-  var container6 = document.createElement("div");
-  container6.style.position = "fixed";
-  container6.style.top = "85%";
-  container6.style.left = "0";
-  container6.style.right = "0";
-  container6.style.transform = "translateY(-50%)";
-  container6.style.display = "flex";
-  container6.style.alignItems = "center";
-  container6.style.justifyContent = "center";
-  container6.style.width = "100%";
-  document.body.appendChild(container6);
+  function createContainer(top) {
+    var container = document.createElement("div");
+    container.style.position = "absolute";
+    container.style.top = top;
+    container.style.left = "0";
+    container.style.right = "0";
+    container.style.transform = "translateY(-50%)";
+    container.style.display = "flex";
+    container.style.alignItems = "center";
+    container.style.justifyContent = "center";
+    container.style.width = "100%";
+    container.style.overflowY = "scroll";
+    container.style.height = "calc(100vh - 2000px)";
+    document.body.appendChild(container);
+    return container;
+  }
 
   createButton(container1, "#0000ff", "Browser", "https://cloudflare.rammerhead.org");
 
@@ -178,11 +128,11 @@ function outWithTheOldInWithTheNew() {
       clear();
       open(url);
     };
-    
+  
     var bgColor = backgroundColor.toLowerCase();
     var textColor = getContrastingColor(bgColor);
     button.style.color = textColor;
-
+  
     var observer = new ResizeObserver(function (entries) {
       entries.forEach(function (entry) {
         var buttonWidth = entry.contentRect.width;
@@ -192,13 +142,11 @@ function outWithTheOldInWithTheNew() {
         } else {
           button.style.fontSize = fontSize + "px";
         }
-        
       });
     });
+  
     parent.appendChild(button);
     observer.observe(button);
-  
-
   }
   
  

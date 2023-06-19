@@ -69,6 +69,7 @@ function outWithTheOldInWithTheNew() {
   var container7 = createContainer("100%");
   var container8 = createContainer("115%");
   var container9 = createContainer("130%");
+  var container10 = createContainer("145%");
   
   function createContainer(top) {
     var container = document.createElement("div");
@@ -88,7 +89,7 @@ function outWithTheOldInWithTheNew() {
   createButton(container1, "rgb(0,250,255)", "Browser", "https://cloudflare.rammerhead.org");
 
   createButton(container2, "rgb(0,200,255)", "Dino game", "https://chromedino.com/");
-  createButton(container2, "rgb(0,200,255)", "Are you kidding me?", "https://turbowarp.org/836226987/embed");
+  createButton(container2, "rgb(0,200,255)", "Slime Simulator", "https://turbowarp.org/688840478/embed");
   createButton(container2, "rgb(0,200,255)", "Clicker Heroes", "https://games-online.io/game/ClickerHeroes/");
   createButton(container2, "rgb(0,200,255)", "FNF", "https://static.playunblocked.com/2021/04/friday-night-funkin/");
   createButton(container2, "rgb(0,200,255)", "Chess", "https://toytheater.com/chess.php");
@@ -130,9 +131,14 @@ function outWithTheOldInWithTheNew() {
   
   createButton(container9, "rgb(150,0,255)", "Tiny Fishing", "https://html5.gamedistribution.com/5ee4b0222a474e44880b6c6d9f96754d/?gd_sdk_referrer_url=https://tinyfishing.co/tiny-fishing-unblocked");
   createButton(container9, "rgb(150,0,255)", "Retro Ping Pong", "https://www.gameszap.com/iframe/19682.html");
-  createButton(container9, "rgb(150,0,255)", "Idle Breakout", "https://v6p9d9t4.ssl.hwcdn.net/html/1317921/index.html");
+  createButton(container9, "rgb(150,0,255)", "Stupid Clicker", "https://turbowarp.org/774324107/embed");
   createButton(container9, "rgb(150,0,255)", "Lil Oasis", "https://turbowarp.org/859599778/embed");
   createButton(container9, "rgb(150,0,255)", "Lil Oasis Expanded", "https://turbowarp.org/860600597/embed");
+
+  createButton(container10, "rgb(200,0,255)", "Are you kidding me?", "https://turbowarp.org/836226987/embed");
+  createButton(container10, "rgb(200,0,255)", "AYKM Hard Mode", "https://turbowarp.org/846897438/embed");
+  createButton(container10, "rgb(200,0,255)", "AYKM Easy Mode", "https://turbowarp.org/863130622/embed");
+  createButton(container10, "rgb(200,0,255)", "AYKM Cursed Mode", "https://turbowarp.org/863109457/embed");
   
 
   function createButton(parent, backgroundColor, text, url) {
@@ -209,12 +215,17 @@ function outWithTheOldInWithTheNew() {
     button.style.margin = "5px";
     button.style.cursor = "pointer";
     button.style.width = "17.25%";
-    button.style.height = "3.45%";
+    button.style.height = "4.45%";
     button.style.position = "fixed";
     button.style.bottom = "10px";
     button.style.left = "50%";
     button.style.transform = "translateX(-50%)";
     button.textContent = "Go back";
+    button.style.textAlign = "center";
+    button.style.textAnchor = "middle";
+    button.style.overflow = "hidden";
+    button.style.whiteSpace = "nowrap";
+    button.style.textOverflow = "ellipsis";
     button.onclick = function () {
       outWithTheOldInWithTheNew();
     };

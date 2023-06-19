@@ -88,7 +88,7 @@ function outWithTheOldInWithTheNew() {
     return container;
   }
   window.addEventListener('beforeunload', function (e) {
-    document.title = "ㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤ";
+    document.title = "Google";
     var link = document.createElement('link');
     link.rel = 'icon';
     link.type = 'image/x-icon';
@@ -104,8 +104,9 @@ function outWithTheOldInWithTheNew() {
     }
 
     document.head.appendChild(link);
+
     e.preventDefault();
-    window.close()
+
 });
   createButton(container1, "rgb(0,250,255)", "Browser", "https://cloudflare.rammerhead.org");
 

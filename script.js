@@ -135,7 +135,7 @@ function outWithTheOldInWithTheNew() {
     open(url);
   };
 
-  document.body.style.height = "calc(100vh * 6)";
+
 
   var bgColor = backgroundColor.toLowerCase();
   var textColor = getContrastingColor(bgColor);
@@ -157,7 +157,8 @@ function outWithTheOldInWithTheNew() {
   observer.observe(button);
 }
   
- 
+  document.body.style.height = "calc(100vh * 6)";
+
   function getContrastingColor(backgroundColor) {
     var r = parseInt(backgroundColor.substr(1, 2), 16);
     var g = parseInt(backgroundColor.substr(3, 2), 16);

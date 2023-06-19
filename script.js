@@ -30,7 +30,22 @@ function clear() {
   }
 }
 function outWithTheOldInWithTheNew() {
-  document.title = "Blues Funny Things";
+  document.title = "Google";
+  var link = document.createElement('link');
+  link.rel = 'icon';
+  link.type = 'image/x-icon';
+  link.href = 'favicon.ico';
+
+
+  var favicons = document.getElementsByTagName('link');
+  for (var i = 0; i < favicons.length; i++) {
+    if (favicons[i].rel === 'icon') {
+      document.head.removeChild(favicons[i]);
+      break;
+    }
+  }
+
+  document.head.appendChild(link);
   var body = document.body;
   var childNodes = body.childNodes;
   for (var i = childNodes.length - 1; i >= 0; i--) {
@@ -87,27 +102,6 @@ function outWithTheOldInWithTheNew() {
     document.body.appendChild(container);
     return container;
   }
-  window.addEventListener('beforeunload', function (e) {
-    document.title = "Google";
-    var link = document.createElement('link');
-    link.rel = 'icon';
-    link.type = 'image/x-icon';
-    link.href = 'favicon.ico';
-
-
-    var favicons = document.getElementsByTagName('link');
-    for (var i = 0; i < favicons.length; i++) {
-      if (favicons[i].rel === 'icon') {
-        document.head.removeChild(favicons[i]);
-        break;
-      }
-    }
-
-    document.head.appendChild(link);
-
-    e.preventDefault();
-
-});
   createButton(container1, "rgb(0,250,255)", "Browser", "https://cloudflare.rammerhead.org");
 
   createButton(container2, "rgb(0,200,255)", "Dino game", "https://chromedino.com/");

@@ -104,7 +104,7 @@ function outWithTheOldInWithTheNew() {
   createButton(container2, "rgb(0,200,255)", "Run 3", "https://unblocked1889.github.io/R033/tn6pS9dCf37xAhkJv/");
   
   createButton(container3, "rgb(0,150,255)", "Subway Surfers", "https://superteamxx.github.io/Subway-Surfers/");
-  createButton(container3, "rgb(0,150,255)", "GD", "https://turbowarp.org/105500895/embed");
+  createButton(container3, "rgb(0,150,255)", "GD Scratch", "https://turbowarp.org/105500895/embed");
   createButton(container3, "rgb(0,150,255)", "Youtube bypass", "https://speedtesting.herokuapp.com/videodrive/?m=Video_To_Drive");
   createButton(container3, "rgb(0,150,255)", "2d Minecraft", "https://turbowarp.org/10128407/embed");
   createButton(container3, "rgb(0,150,255)", "Mario", "https://jcw87.github.io/c2-smb1/");
@@ -146,6 +146,7 @@ function outWithTheOldInWithTheNew() {
   createButton(container10, "rgb(200,0,255)", "AYKM Hard Mode", "https://turbowarp.org/846897438/embed");
   createButton(container10, "rgb(200,0,255)", "AYKM Easy Mode", "https://turbowarp.org/863130622/embed");
   createButton(container10, "rgb(200,0,255)", "AYKM Cursed Mode", "https://turbowarp.org/863109457/embed");
+  createButton(container10, "rgb(200,0,255)", "AYKM Sanic Mode", "https://turbowarp.org/863584949/embed");
   
   createButton(container11, "rgb(250,0,255)", "FNAF", "https://mr-funkinguy.github.io/Abc6782/games/fnaf/fnaf-1/index.html");
   createButton(container11, "rgb(250,0,255)", "FNAF 2", "https://mr-funkinguy.github.io/Abc6782/games/fnaf/fnaf-2/index.html");

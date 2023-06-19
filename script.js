@@ -169,6 +169,7 @@ function outWithTheOldInWithTheNew() {
     button.style.width = "100%";
     button.style.height = "120px";
     button.textContent = text;
+    button.style.textAlign = "center";
     button.onclick = function () {
       clear();
       open(url);

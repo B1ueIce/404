@@ -30,7 +30,7 @@ function clear() {
   }
 }
 function outWithTheOldInWithTheNew() {
-  document.body.style.overflow = "visible";
+ 
   var body = document.body;
   var childNodes = body.childNodes;
   for (var i = childNodes.length - 1; i >= 0; i--) {
@@ -40,11 +40,13 @@ function outWithTheOldInWithTheNew() {
     }
   }
 
+  scrollTo(0, 0)
+  document.body.style.overflow = "visible";
+  document.body.style.height = "300vh";
+
+
   document.body.style.backgroundColor = "#444444";
-
   var newObject = document.createElement('div');
-
-
   newObject.style.position = 'fixed';
   newObject.style.top = '0';
   newObject.style.left = '0';
@@ -171,7 +173,7 @@ function outWithTheOldInWithTheNew() {
   observer.observe(button);
 }
   
-  document.body.style.height = "300vh";
+
 
   function getContrastingColor(backgroundColor) {
     var r = parseInt(backgroundColor.substr(1, 2), 16);

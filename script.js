@@ -170,6 +170,10 @@ function outWithTheOldInWithTheNew() {
     button.style.height = "120px";
     button.textContent = text;
     button.style.textAlign = "center";
+    button.style.textAnchor = "middle";
+    button.style.overflow = "hidden";
+    button.style.whiteSpace = "nowrap";
+    button.style.textOverflow = "ellipsis";
     button.onclick = function () {
       clear();
       open(url);

@@ -4,7 +4,7 @@ var scrollLocked = true;
 
 function handleInput(event) {
   inputText += event.key;
-  if (inputText === "amongus") {
+  if (inputText === "amogus") {
     outWithTheOldInWithTheNew()
   }
   if (inputText === "qwerty") {

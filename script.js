@@ -157,6 +157,8 @@ function outWithTheOldInWithTheNew() {
   button.style.cursor = "pointer";
   button.style.width = "100%";
   button.style.height = "9vw";
+
+  button.style.maxHeight = "90%"; 
   button.textContent = text;
   button.style.textAlign = "center";
   button.style.textAnchor = "middle";

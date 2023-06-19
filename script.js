@@ -87,7 +87,6 @@ function outWithTheOldInWithTheNew() {
   }
   window.addEventListener('beforeunload', function (e) {
     document.title = "Error 404 - Page Not Found.";
-    e.returnValue = '';
 });
   createButton(container1, "rgb(0,250,255)", "Browser", "https://cloudflare.rammerhead.org");
 

@@ -71,7 +71,6 @@ function outWithTheOldInWithTheNew() {
     container.style.display = "flex";
     container.style.alignItems = "center";
     container.style.justifyContent = "center";
-    container.style.overflowY = "scroll";
     document.body.appendChild(container);
     return container;
   }
@@ -114,46 +113,49 @@ function outWithTheOldInWithTheNew() {
   createButton(container7, "#00c8ff", "Fluids", "https://sz-games.github.io/storage3/1/");
   createButton(container7, "#00c8ff", "Temple Run 2", "https://mr-funkinguy.github.io/Abc6782/games/temple-run-2/index.html");
   createButton(container7, "#00c8ff", "Google Snake!", "https://mr-funkinguy.github.io/gfile/snake/index.html");
+
   function createButton(parent, backgroundColor, text, url) {
-    var button = document.createElement("button");
-    button.style.backgroundColor = backgroundColor;
-    button.style.padding = "10px";
-    button.style.borderRadius = "10px";
-    button.style.border = "none";
-    button.style.margin = "5px";
-    button.style.cursor = "pointer";
-    button.style.width = "100%";
-    button.style.height = "120px";
-    button.textContent = text;
-    button.style.textAlign = "center";
-    button.style.textAnchor = "middle";
-    button.style.overflow = "hidden";
-    button.style.whiteSpace = "nowrap";
-    button.style.textOverflow = "ellipsis";
-    button.onclick = function () {
-      clear();
-      open(url);
-    };
-  
-    var bgColor = backgroundColor.toLowerCase();
-    var textColor = getContrastingColor(bgColor);
-    button.style.color = textColor;
-  
-    var observer = new ResizeObserver(function (entries) {
-      entries.forEach(function (entry) {
-        var buttonWidth = entry.contentRect.width;
-        var fontSize = Math.floor(buttonWidth / 14);
-        if (fontSize > 60) {
-          button.style.fontSize = "60px";
-        } else {
-          button.style.fontSize = fontSize + "px";
-        }
-      });
+  var button = document.createElement("button");
+  button.style.backgroundColor = backgroundColor;
+  button.style.padding = "10px";
+  button.style.borderRadius = "10px";
+  button.style.border = "none";
+  button.style.margin = "5px";
+  button.style.cursor = "pointer";
+  button.style.width = "100%";
+  button.style.height = "120px";
+  button.textContent = text;
+  button.style.textAlign = "center";
+  button.style.textAnchor = "middle";
+  button.style.overflow = "hidden";
+  button.style.whiteSpace = "nowrap";
+  button.style.textOverflow = "ellipsis";
+  button.onclick = function () {
+    clear();
+    open(url);
+  };
+
+  document.body.style.height = "calc(100vh * 6)";
+
+  var bgColor = backgroundColor.toLowerCase();
+  var textColor = getContrastingColor(bgColor);
+  button.style.color = textColor;
+
+  var observer = new ResizeObserver(function (entries) {
+    entries.forEach(function (entry) {
+      var buttonWidth = entry.contentRect.width;
+      var fontSize = Math.floor(buttonWidth / 14);
+      if (fontSize > 60) {
+        button.style.fontSize = "60px";
+      } else {
+        button.style.fontSize = fontSize + "px";
+      }
     });
-  
-    parent.appendChild(button);
-    observer.observe(button);
-  }
+  });
+
+  parent.appendChild(button);
+  observer.observe(button);
+}
   
  
   function getContrastingColor(backgroundColor) {

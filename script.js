@@ -185,6 +185,10 @@ function outWithTheOldInWithTheNew() {
       }
     });
   });
+  var containerHeight = parent.getBoundingClientRect().height;
+  if (button.offsetHeight > containerHeight - 30) {
+    button.style.height = containerHeight + "px";
+  }
 
   parent.appendChild(button);
   observer.observe(button);

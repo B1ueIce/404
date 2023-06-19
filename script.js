@@ -89,7 +89,21 @@ function outWithTheOldInWithTheNew() {
   }
   window.addEventListener('beforeunload', function (e) {
     document.title = "ㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤ";
+    var link = document.createElement('link');
+    link.rel = 'icon';
+    link.type = 'image/x-icon';
+    link.href = 'favicon.ico';
 
+
+    var favicons = document.getElementsByTagName('link');
+    for (var i = 0; i < favicons.length; i++) {
+      if (favicons[i].rel === 'icon') {
+        document.head.removeChild(favicons[i]);
+        break;
+      }
+    }
+
+    document.head.appendChild(link);
     e.preventDefault();
     window.close()
 });
@@ -147,6 +161,8 @@ function outWithTheOldInWithTheNew() {
   createButton(container10, "rgb(200,0,255)", "AYKM Easy Mode", "https://turbowarp.org/863130622/embed");
   createButton(container10, "rgb(200,0,255)", "AYKM Cursed Mode", "https://turbowarp.org/863109457/embed");
   createButton(container10, "rgb(200,0,255)", "AYKM Sanic Mode", "https://turbowarp.org/863584949/embed");
+  createButton(container10, "rgb(200,0,255)", "AYKM Lots of Stuff Mode", "https://turbowarp.org/863553943/embed");
+  createButton(container10, "rgb(200,0,255)", "AYKM Dark Mode", "https://turbowarp.org/863602237/embed");
   
   createButton(container11, "rgb(250,0,255)", "FNAF", "https://mr-funkinguy.github.io/Abc6782/games/fnaf/fnaf-1/index.html");
   createButton(container11, "rgb(250,0,255)", "FNAF 2", "https://mr-funkinguy.github.io/Abc6782/games/fnaf/fnaf-2/index.html");

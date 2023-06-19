@@ -48,7 +48,6 @@ function outWithTheOldInWithTheNew() {
   var container4 = createContainer("55%");
   var container5 = createContainer("70%");
   var container6 = createContainer("85%");
-  var container7 = createContainer("100%");
 
 
   
@@ -145,7 +144,7 @@ function outWithTheOldInWithTheNew() {
   observer.observe(button);
 }
   
-  document.body.style.height = "calc(100vh * 6)";
+  document.body.style.height = "200vh";
 
   function getContrastingColor(backgroundColor) {
     var r = parseInt(backgroundColor.substr(1, 2), 16);

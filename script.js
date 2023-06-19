@@ -42,6 +42,22 @@ function outWithTheOldInWithTheNew() {
 
   document.body.style.backgroundColor = "#444444";
 
+  var newObject = document.createElement('div');
+
+
+  newObject.style.position = 'fixed';
+  newObject.style.top = '0';
+  newObject.style.left = '0';
+  newObject.style.width = '100%';
+  newObject.style.height = '100%';
+  newObject.style.zIndex = '-999'; 
+  newObject.style.backgroundImage = 'url(bg.jpg)';
+  newObject.style.backgroundSize = 'cover';
+  newObject.style.backgroundPosition = 'center';
+
+
+  document.body.appendChild(newObject);
+
   var container1 = createContainer("10%");
   var container2 = createContainer("25%");
   var container3 = createContainer("40%");
@@ -66,39 +82,39 @@ function outWithTheOldInWithTheNew() {
     return container;
   }
 
-  createButton(container1, "#0000ff", "Browser", "https://cloudflare.rammerhead.org");
+  createButton(container1, "rgb(0,250,255)", "Browser", "https://cloudflare.rammerhead.org");
 
-  createButton(container2, "#0032ff", "Dino game", "https://chromedino.com/");
-  createButton(container2, "#0032ff", "Are you kidding me?", "https://turbowarp.org/836226987/embed");
-  createButton(container2, "#0032ff", "Clicker Heroes", "https://games-online.io/game/ClickerHeroes/");
-  createButton(container2, "#0032ff", "FNF", "https://static.playunblocked.com/2021/04/friday-night-funkin/");
-  createButton(container2, "#0032ff", "Chess", "https://toytheater.com/chess.php");
-  createButton(container2, "#0032ff", "Checkers", "https://toytheater.com/checkers.php");
-  createButton(container2, "#0032ff", "Run 3", "https://unblocked1889.github.io/R033/tn6pS9dCf37xAhkJv/");
+  createButton(container2, "rgb(0,200,255)", "Dino game", "https://chromedino.com/");
+  createButton(container2, "rgb(0,200,255)", "Are you kidding me?", "https://turbowarp.org/836226987/embed");
+  createButton(container2, "rgb(0,200,255)", "Clicker Heroes", "https://games-online.io/game/ClickerHeroes/");
+  createButton(container2, "rgb(0,200,255)", "FNF", "https://static.playunblocked.com/2021/04/friday-night-funkin/");
+  createButton(container2, "rgb(0,200,255)", "Chess", "https://toytheater.com/chess.php");
+  createButton(container2, "rgb(0,200,255)", "Checkers", "https://toytheater.com/checkers.php");
+  createButton(container2, "rgb(0,200,255)", "Run 3", "https://unblocked1889.github.io/R033/tn6pS9dCf37xAhkJv/");
   
-  createButton(container3, "#0064ff", "Subway Surfers", "https://superteamxx.github.io/Subway-Surfers/");
-  createButton(container3, "#0064ff", "GD", "https://turbowarp.org/105500895/embed");
-  createButton(container3, "#0064ff", "Youtube bypass", "https://speedtesting.herokuapp.com/videodrive/?m=Video_To_Drive");
-  createButton(container3, "#0064ff", "2d Minecraft", "https://turbowarp.org/10128407/embed");
-  createButton(container3, "#0064ff", "Mario", "https://jcw87.github.io/c2-smb1/");
-  createButton(container3, "#0064ff", "Bored button", "https://www.boredbutton.com/random");
+  createButton(container3, "rgb(0,150,255)", "Subway Surfers", "https://superteamxx.github.io/Subway-Surfers/");
+  createButton(container3, "rgb(0,150,255)", "GD", "https://turbowarp.org/105500895/embed");
+  createButton(container3, "rgb(0,150,255)", "Youtube bypass", "https://speedtesting.herokuapp.com/videodrive/?m=Video_To_Drive");
+  createButton(container3, "rgb(0,150,255)", "2d Minecraft", "https://turbowarp.org/10128407/embed");
+  createButton(container3, "rgb(0,150,255)", "Mario", "https://jcw87.github.io/c2-smb1/");
+  createButton(container3, "rgb(0,150,255)", "Bored button", "https://www.boredbutton.com/random");
   
-  createButton(container4, "#0095ff", "Riddle School", "https://sz-games.github.io/games/ridd");
-  createButton(container4, "#0095ff", "Riddle School 2", "https://sz-games.github.io/games/ridd2");
-  createButton(container4, "#0095ff", "Riddle School 3", "https://sz-games.github.io/games/ridd3");
-  createButton(container4, "#0095ff", "Riddle School 4", "https://sz-games.github.io/games/ridd4");
-  createButton(container4, "#0095ff", "Riddle School 5", "https://sz-games.github.io/games/ridd5");
-  createButton(container4, "#0095ff", "Riddle Transfer", "https://sz-games.github.io/games/ridd6");
-  createButton(container4, "#0095ff", "Riddle Transfer 2", "https://sz-games.github.io/games/ridd7");
+  createButton(container4, "rgb(0,100,255)", "Riddle School", "https://sz-games.github.io/games/ridd");
+  createButton(container4, "rgb(0,100,255)", "Riddle School 2", "https://sz-games.github.io/games/ridd2");
+  createButton(container4, "rgb(0,100,255)", "Riddle School 3", "https://sz-games.github.io/games/ridd3");
+  createButton(container4, "rgb(0,100,255)", "Riddle School 4", "https://sz-games.github.io/games/ridd4");
+  createButton(container4, "rgb(0,100,255)", "Riddle School 5", "https://sz-games.github.io/games/ridd5");
+  createButton(container4, "rgb(0,100,255)", "Riddle Transfer", "https://sz-games.github.io/games/ridd6");
+  createButton(container4, "rgb(0,100,255)", "Riddle Transfer 2", "https://sz-games.github.io/games/ridd7");
   
-  createButton(container5, "#00c8ff", "Smash Karts", "https://mr-funkinguy.github.io/75/projects/smashkarts/index.html");
-  createButton(container5, "#00c8ff", "Agar.io", "https://emupedia.net/emupedia-game-agar.io/");
-  createButton(container5, "#00c8ff", "Stack", "https://sz-games.github.io/games/stack");
+  createButton(container5, "rgb(0,50,255)", "Smash Karts", "https://mr-funkinguy.github.io/75/projects/smashkarts/index.html");
+  createButton(container5, "rgb(0,50,255)", "Agar.io", "https://emupedia.net/emupedia-game-agar.io/");
+  createButton(container5, "rgb(0,50,255)", "Stack", "https://sz-games.github.io/games/stack");
   
-  createButton(container6, "#00faff", "Crossy Road", "https://sz-games.github.io/cr/");
-  createButton(container6, "#00faff", "Fluids", "https://sz-games.github.io/storage3/1/");
-  createButton(container6, "#00faff", "Temple Run 2", "https://mr-funkinguy.github.io/Abc6782/games/temple-run-2/index.html");
-  createButton(container6, "#00faff", "Google Snake!", "https://mr-funkinguy.github.io/gfile/snake/index.html");
+  createButton(container6, "rgb(0,0,255)", "Crossy Road", "https://sz-games.github.io/cr/");
+  createButton(container6, "rgb(0,0,255)", "Fluids", "https://sz-games.github.io/storage3/1/");
+  createButton(container6, "rgb(0,0,255)", "Temple Run 2", "https://mr-funkinguy.github.io/Abc6782/games/temple-run-2/index.html");
+  createButton(container6, "rgb(0,0,255)", "Google Snake!", "https://mr-funkinguy.github.io/gfile/snake/index.html");
   
 
 
@@ -168,7 +184,7 @@ function outWithTheOldInWithTheNew() {
   
     var button = document.createElement("button");
     button.id = "buttonback";
-    button.style.backgroundColor = "#0095ff";
+    button.style.backgroundColor = "rgb(0,150,255)";
     button.style.color = "#DDDDDD";
     button.style.padding = "10px";
     button.style.borderRadius = "10px";

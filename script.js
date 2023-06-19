@@ -64,7 +64,8 @@ function outWithTheOldInWithTheNew() {
   var container4 = createContainer("55%");
   var container5 = createContainer("70%");
   var container6 = createContainer("85%");
-
+  var container7 = createContainer("100%");
+  var container8 = createContainer("115%");
 
   
   function createContainer(top) {
@@ -115,6 +116,15 @@ function outWithTheOldInWithTheNew() {
   createButton(container6, "rgb(0,0,255)", "Fluids", "https://sz-games.github.io/storage3/1/");
   createButton(container6, "rgb(0,0,255)", "Temple Run 2", "https://mr-funkinguy.github.io/Abc6782/games/temple-run-2/index.html");
   createButton(container6, "rgb(0,0,255)", "Google Snake!", "https://mr-funkinguy.github.io/gfile/snake/index.html");
+  
+  createButton(container7, "rgb(50,0,255)", "Doodle Jump", "https://mr-funkinguy.github.io/gfile/doodle/index.html");
+  createButton(container7, "rgb(50,0,255)", "Paper.io 2", "https://script.google.com/macros/s/AKfycbxO8jKpDOwFYpSGrGbReR4Mv2e1-6T4uHsWBphygjzyG8Qqpvij/exec");
+  createButton(container7, "rgb(50,0,255)", "Fruit Ninja", "https://mr-funkinguy.github.io/Abc6782/games/fruitNinja/index.html");
+
+  createButton(container8, "rgb(100,0,255)", "BTD", "https://mr-funkinguy.github.io/GameStuff/gfiles/btd/");
+  createButton(container8, "rgb(100,0,255)", "BTD2", "https://mr-funkinguy.github.io/GameStuff/gfiles/btd2/index.html");
+  createButton(container8, "rgb(100,0,255)", "Super Smash Flash", "https://mr-funkinguy.github.io/GameStuff/gfiles/ssf/");
+  createButton(container8, "rgb(100,0,255)", "Flappy Bird", "https://mr-funkinguy.github.io/83/flappy-bird/index.html");
   
 
 

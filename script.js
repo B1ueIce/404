@@ -49,6 +49,10 @@ function outWithTheOldInWithTheNew() {
   var container5 = createContainer("70%");
   var container6 = createContainer("85%");
 
+  var Mario = createContainer("270%");
+  var Mario2 = createContainer("285%");
+  var Mario3 = createContainer("300%");
+
 
   
   function createContainer(top) {
@@ -100,6 +104,27 @@ function outWithTheOldInWithTheNew() {
   createButton(container6, "#00faff", "Temple Run 2", "https://mr-funkinguy.github.io/Abc6782/games/temple-run-2/index.html");
   createButton(container6, "#00faff", "Google Snake!", "https://mr-funkinguy.github.io/gfile/snake/index.html");
   
+  createButton(Mario, "#ff0000", "Mario", "https://jcw87.github.io/c2-smb1/");
+  createButton(Mario, "#ff0000", "Mario", "https://jcw87.github.io/c2-smb1/");
+  createButton(Mario, "#ff0000", "Mario", "https://jcw87.github.io/c2-smb1/");
+  createButton(Mario, "#ff0000", "Mario", "https://jcw87.github.io/c2-smb1/");
+  createButton(Mario, "#ff0000", "Mario", "https://jcw87.github.io/c2-smb1/");
+  createButton(Mario, "#ff0000", "Mario", "https://jcw87.github.io/c2-smb1/");
+  createButton(Mario, "#ff0000", "Mario", "https://jcw87.github.io/c2-smb1/");
+  createButton(Mario, "#ff0000", "Mario", "https://jcw87.github.io/c2-smb1/");
+
+  createButton(Mario2, "#ff0000", "Mario", "https://jcw87.github.io/c2-smb1/");
+  createButton(Mario2, "#ff0000", "Mario", "https://jcw87.github.io/c2-smb1/");
+  createButton(Mario2, "#ff0000", "Mario", "https://jcw87.github.io/c2-smb1/");
+  createButton(Mario2, "#ff0000", "Mario", "https://jcw87.github.io/c2-smb1/");
+
+  createButton(Mario3, "#ff0000", "Mario", "https://jcw87.github.io/c2-smb1/");
+  createButton(Mario3, "#ff0000", "Mario", "https://jcw87.github.io/c2-smb1/");
+  createButton(Mario3, "#ff0000", "Mario", "https://jcw87.github.io/c2-smb1/");
+  createButton(Mario3, "#ff0000", "Mario", "https://jcw87.github.io/c2-smb1/");
+  createButton(Mario3, "#ff0000", "Mario", "https://jcw87.github.io/c2-smb1/");
+
+
 
   function createButton(parent, backgroundColor, text, url) {
   var button = document.createElement("button");
@@ -144,7 +169,7 @@ function outWithTheOldInWithTheNew() {
   observer.observe(button);
 }
   
-  document.body.style.height = "200vh";
+  document.body.style.height = "300vh";
 
   function getContrastingColor(backgroundColor) {
     var r = parseInt(backgroundColor.substr(1, 2), 16);

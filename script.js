@@ -183,13 +183,13 @@ function outWithTheOldInWithTheNew() {
       } else {
         button.style.fontSize = fontSize + "px";
       }
+      var containerHeight = parent.getBoundingClientRect().height;
+      if (button.offsetHeight > containerHeight) {
+        button.style.height = containerHeight + "px";
+      }
     });
   });
-  var containerHeight = parent.getBoundingClientRect().height;
-  if (button.offsetHeight > containerHeight - 30) {
-    button.style.height = containerHeight + "px";
-  }
-
+  
   parent.appendChild(button);
   observer.observe(button);
 }

@@ -1,6 +1,5 @@
 var inputText = "";
 var buttonPress = 0;
-var scrollLocked = true;
 
 function handleInput(event) {
   inputText += event.key;
@@ -14,21 +13,13 @@ function handleInput(event) {
   if (inputText === "qwertyuiop" && buttonPress === 1) {
     var button2 = document.getElementById("invis2");
     button2.style.display = "block";
-    scrollLocked = false;
-    
-  }
-
-  if (scrollLocked) {
-    event.preventDefault(); // Prevent scrolling until unlocked
   }
 }
 
 function stage2() {
   buttonPress = 1;
-  
 }
 function clear() {
-  document.body.style.overflow = "";
   var body = document.body;
   var childNodes = body.childNodes;
   for (var i = childNodes.length - 1; i >= 0; i--) {
@@ -39,6 +30,7 @@ function clear() {
   }
 }
 function outWithTheOldInWithTheNew() {
+  document.body.style.overflow = "visible";
   var body = document.body;
   var childNodes = body.childNodes;
   for (var i = childNodes.length - 1; i >= 0; i--) {
@@ -62,7 +54,7 @@ function outWithTheOldInWithTheNew() {
   
   function createContainer(top) {
     var container = document.createElement("div");
-    container.style.position = "fixed";
+    container.style.position = "absolute";
     container.style.top = top;
     container.style.left = "0";
     container.style.right = "0";
@@ -109,10 +101,6 @@ function outWithTheOldInWithTheNew() {
   createButton(container6, "#00faff", "Temple Run 2", "https://mr-funkinguy.github.io/Abc6782/games/temple-run-2/index.html");
   createButton(container6, "#00faff", "Google Snake!", "https://mr-funkinguy.github.io/gfile/snake/index.html");
   
-  createButton(container7, "#00c8ff", "Crossy Road", "https://sz-games.github.io/cr/");
-  createButton(container7, "#00c8ff", "Fluids", "https://sz-games.github.io/storage3/1/");
-  createButton(container7, "#00c8ff", "Temple Run 2", "https://mr-funkinguy.github.io/Abc6782/games/temple-run-2/index.html");
-  createButton(container7, "#00c8ff", "Google Snake!", "https://mr-funkinguy.github.io/gfile/snake/index.html");
 
   function createButton(parent, backgroundColor, text, url) {
   var button = document.createElement("button");

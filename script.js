@@ -62,15 +62,15 @@ function outWithTheOldInWithTheNew() {
   
   function createContainer(top) {
     var container = document.createElement("div");
-    container.style.top = top;
+    container.style.position = "fixed";
+    container.style.top = "10%";
     container.style.left = "0";
     container.style.right = "0";
     container.style.transform = "translateY(-50%)";
-    container.style.width = "100%";
-    container.style.position = "absolute";
     container.style.display = "flex";
     container.style.alignItems = "center";
     container.style.justifyContent = "center";
+    container.style.width = "100%";
     document.body.appendChild(container);
     return container;
   }

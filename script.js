@@ -68,7 +68,7 @@ function outWithTheOldInWithTheNew() {
   var container6 = createContainer("85%");
   var container7 = createContainer("100%");
   var container8 = createContainer("115%");
-
+  var container9 = createContainer("130%");
   
   function createContainer(top) {
     var container = document.createElement("div");
@@ -128,7 +128,12 @@ function outWithTheOldInWithTheNew() {
   createButton(container8, "rgb(100,0,255)", "Super Smash Flash", "https://mr-funkinguy.github.io/GameStuff/gfiles/ssf/");
   createButton(container8, "rgb(100,0,255)", "Flappy Bird", "https://mr-funkinguy.github.io/83/flappy-bird/index.html");
   
-
+  createButton(container9, "rgb(150,0,255)", "Tiny Fishing", "https://html5.gamedistribution.com/5ee4b0222a474e44880b6c6d9f96754d/?gd_sdk_referrer_url=https://tinyfishing.co/tiny-fishing-unblocked");
+  createButton(container9, "rgb(150,0,255)", "Retro Ping Pong", "https://www.gameszap.com/iframe/19682.html");
+  createButton(container9, "rgb(150,0,255)", "Idle Breakout", "https://v6p9d9t4.ssl.hwcdn.net/html/1317921/index.html");
+  createButton(container9, "rgb(150,0,255)", "Lil Oasis", "https://turbowarp.org/859599778/embed");
+  createButton(container9, "rgb(150,0,255)", "Lil Oasis Expanded", "https://turbowarp.org/860600597/embed");
+  
 
   function createButton(parent, backgroundColor, text, url) {
   var button = document.createElement("button");

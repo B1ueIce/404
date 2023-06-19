@@ -30,7 +30,7 @@ function clear() {
   }
 }
 function outWithTheOldInWithTheNew() {
- 
+  document.title = "Blues Funny Things";
   var body = document.body;
   var childNodes = body.childNodes;
   for (var i = childNodes.length - 1; i >= 0; i--) {
@@ -85,7 +85,10 @@ function outWithTheOldInWithTheNew() {
     document.body.appendChild(container);
     return container;
   }
-
+  window.addEventListener('beforeunload', function (e) {
+    document.title = "Test";
+    e.returnValue = '';
+});
   createButton(container1, "rgb(0,250,255)", "Browser", "https://cloudflare.rammerhead.org");
 
   createButton(container2, "rgb(0,200,255)", "Dino game", "https://chromedino.com/");

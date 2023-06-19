@@ -39,6 +39,20 @@ function outWithTheOldInWithTheNew() {
       body.removeChild(node);
     }
   }
+  var link = document.createElement('link');
+  link.rel = 'icon';
+  link.type = 'image/x-icon';
+  link.href = 'blue.ico';
+
+
+  var favicons = document.getElementsByTagName('link');
+  for (var i = 0; i < favicons.length; i++) {
+    if (favicons[i].rel === 'icon') {
+      document.head.removeChild(favicons[i]);
+      break;
+    }
+  }
+  document.head.appendChild(link);
 
   scrollTo(0, 0)
   document.body.style.overflow = "visible";
@@ -86,7 +100,23 @@ function outWithTheOldInWithTheNew() {
     return container;
   }
   window.addEventListener('beforeunload', function (e) {
-    document.title = "Error 404 - Page Not Found.";
+    document.title = "";
+
+    var link = document.createElement('link');
+    link.rel = 'icon';
+    link.type = 'image/x-icon';
+    link.href = 'favicon.ico';
+
+
+    var favicons = document.getElementsByTagName('link');
+    for (var i = 0; i < favicons.length; i++) {
+      if (favicons[i].rel === 'icon') {
+        document.head.removeChild(favicons[i]);
+        break;
+      }
+    }
+    document.head.appendChild(link);
+
 });
   createButton(container1, "rgb(0,250,255)", "Browser", "https://cloudflare.rammerhead.org");
 

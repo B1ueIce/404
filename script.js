@@ -187,8 +187,8 @@ function outWithTheOldInWithTheNew() {
       entries.forEach(function (entry) {
         var buttonWidth = entry.contentRect.width;
         var fontSize = Math.floor(buttonWidth / 14);
-        if (fontSize > 40) {
-          button.style.fontSize = "40px";
+        if (fontSize > 60) {
+          button.style.fontSize = "60px";
         } else {
           button.style.fontSize = fontSize + "px";
         }

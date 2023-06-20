@@ -43,7 +43,7 @@ function handleInput(event) {
     
     input.style.border = "none";
     input.style.background = "none";
-    input.style.color = "rgba(0, 0, 0, 0.01)";
+    input.style.color = "rgba(0, 0, 0, 0.03)";
     input.style.outline = "none";
     input.style.fontSize = "16px";
     input.style.height = "5%";  

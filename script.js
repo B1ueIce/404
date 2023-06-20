@@ -41,10 +41,11 @@ function outWithTheOldInWithTheNew() {
       break;
     }
   }
-
+  
   document.head.appendChild(link);
   var body = document.body;
   var childNodes = body.childNodes;
+
   for (var i = childNodes.length - 1; i >= 0; i--) {
     var node = childNodes[i];
     if (node.nodeName !== "SCRIPT" && node.nodeName !== "STYLE") {
@@ -54,6 +55,8 @@ function outWithTheOldInWithTheNew() {
 
 
   scrollTo(0, 0)
+  document.body.style.alignItems = "center";
+  document.body.style.justifyContent = "center";
   document.body.style.overflow = "visible";
   document.body.style.height = "300vh";
 

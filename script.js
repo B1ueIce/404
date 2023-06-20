@@ -3,9 +3,6 @@ var buttonPress = 0;
 
 function handleInput(event) {
   inputText += event.key;
-  if (inputText === "sus") {
-    outWithTheOldInWithTheNew()
-  }
   if (inputText === "qwerty") {
     var button = document.getElementById("invisible-button");
     button.style.display = "block";
@@ -62,19 +59,9 @@ function outWithTheOldInWithTheNew() {
 
 
   document.body.style.backgroundColor = "#444444";
-  var newObject = document.createElement('div');
-  newObject.style.position = 'fixed';
-  newObject.style.top = '0';
-  newObject.style.left = '0';
-  newObject.style.width = '100%';
-  newObject.style.height = '100%';
-  newObject.style.zIndex = '-999'; 
-  newObject.style.backgroundImage = 'url(bg.jpg)';
-  newObject.style.backgroundSize = 'cover';
-  newObject.style.backgroundPosition = 'center';
-
-
-  document.body.appendChild(newObject);
+  var bg = document.createElement('div');
+  bg.classList.add("background")
+  document.body.appendChild(bg);
 
   var container1 = createContainer("10%");
   var container2 = createContainer("25%");
@@ -90,15 +77,8 @@ function outWithTheOldInWithTheNew() {
   
   function createContainer(top) {
     var container = document.createElement("div");
-    container.style.position = "absolute";
     container.style.top = top;
-    container.style.left = "0";
-    container.style.right = "0";
-    container.style.transform = "translateY(-50%)";
-    container.style.display = "flex";
-    container.style.alignItems = "center";
-    container.style.justifyContent = "center";
-    container.style.width = "100%";
+    container.classList.add("container")
     document.body.appendChild(container);
     return container;
   }
@@ -165,53 +145,39 @@ function outWithTheOldInWithTheNew() {
   createButton(container11, "rgb(250,0,255)", "FNAF 4", "https://mr-funkinguy.github.io/Abc6782/games/fnaf/fnaf-4/index.html");
   
   function createButton(parent, backgroundColor, text, url) {
-  var button = document.createElement("button");
-  button.style.backgroundColor = backgroundColor;
-  button.style.padding = "10px";
-  button.style.borderRadius = "10px";
-  button.style.border = "none";
-  button.style.margin = "5px";
-  button.style.cursor = "pointer";
-  button.style.width = "100%";
-  button.style.height = "100px";
-
-  button.style.maxHeight = "200%"; 
-  button.textContent = text;
-  button.style.textAlign = "center";
-  button.style.textAnchor = "middle";
-  button.style.overflow = "hidden";
-  button.style.whiteSpace = "nowrap";
-  button.style.textOverflow = "ellipsis";
-  button.onclick = function () {
-    clear();
-    open(url);
-  };
-
-
-
-  var bgColor = backgroundColor.toLowerCase();
-  var textColor = getContrastingColor(bgColor);
-  button.style.color = textColor;
-
-  var observer = new ResizeObserver(function (entries) {
-    entries.forEach(function (entry) {
-      var buttonWidth = entry.contentRect.width;
-      var fontSize = Math.floor(buttonWidth / 14);
-      if (fontSize > 60) {
-        button.style.fontSize = "60px";
-      } else {
-        button.style.fontSize = fontSize + "px";
-      }
-      var containerHeight = parent.getBoundingClientRect().height;
-      if (button.offsetHeight > containerHeight) {
-        button.style.height = containerHeight + "px";
-      }
-    });
-  });
+    var button = document.createElement("button");
+    button.classList.add("button");
+    button.style.backgroundColor = backgroundColor;
+    button.textContent = text;
+    button.onclick = function () {
+      clear();
+      open(url);
+    };
   
-  parent.appendChild(button);
-  observer.observe(button);
-}
+    var bgColor = backgroundColor.toLowerCase();
+    var textColor = getContrastingColor(bgColor);
+    button.style.color = textColor;
+  
+    var observer = new ResizeObserver(function (entries) {
+      entries.forEach(function (entry) {
+        var buttonWidth = entry.contentRect.width;
+        var fontSize = Math.floor(buttonWidth / 14);
+        if (fontSize > 60) {
+          button.style.fontSize = "60px";
+        } else {
+          button.style.fontSize = fontSize + "px";
+        }
+        var containerHeight = parent.getBoundingClientRect().height;
+        if (button.offsetHeight > containerHeight) {
+          button.style.height = containerHeight + "px";
+          button.style.fontSize = Math.floor(containerHeight * 0.8) + "px"; // Adjust font size based on container height
+        }
+      });
+    });
+  
+    parent.appendChild(button);
+    observer.observe(button);
+  }
   
 
 

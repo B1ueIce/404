@@ -60,7 +60,7 @@ function outWithTheOldInWithTheNew() {
 
   document.body.style.backgroundColor = "#444444";
   var bg = document.createElement('div');
-  bg.classList.add("background")
+  bg.id = "background"
   document.body.appendChild(bg);
 
   var container1 = createContainer("10%");
@@ -192,35 +192,12 @@ function outWithTheOldInWithTheNew() {
   function open(url) {
     var iframe = document.createElement("iframe");
     iframe.src = url;
-    iframe.style.width = "100%";
-    iframe.style.height = "100%";
-    iframe.style.position = "fixed";
-    iframe.style.top = "0";
-    iframe.style.left = "0";
-    iframe.style.border = "none";
+    iframe.classList.add("emulation-container")
     document.body.appendChild(iframe);
   
     var button = document.createElement("button");
     button.id = "buttonback";
-    button.style.backgroundColor = "rgb(0,150,255)";
-    button.style.color = "#DDDDDD";
-    button.style.padding = "10px";
-    button.style.borderRadius = "10px";
-    button.style.border = "none";
-    button.style.margin = "5px";
-    button.style.cursor = "pointer";
-    button.style.width = "17.25%";
-    button.style.height = "4.45%";
-    button.style.position = "fixed";
-    button.style.bottom = "10px";
-    button.style.left = "50%";
-    button.style.transform = "translateX(-50%)";
-    button.textContent = "Go back";
-    button.style.textAlign = "center";
-    button.style.textAnchor = "middle";
-    button.style.overflow = "hidden";
-    button.style.whiteSpace = "nowrap";
-    button.style.textOverflow = "ellipsis";
+    button.textContent = "Go back"
     button.onclick = function () {
       outWithTheOldInWithTheNew();
     };

@@ -4,18 +4,63 @@ var buttonPress = 0;
 function handleInput(event) {
   inputText += event.key;
   if (inputText === "qwerty") {
-    var button = document.getElementById("invisible-button");
+    var button = document.createElement("button");
+    button.id = "invisible-button";
+    button.className = "invisible-button";
+    button.onclick = stage2;
     button.style.display = "block";
+
+    document.body.appendChild(button);
   }
   if (inputText === "qwertyuiop" && buttonPress === 1) {
-    var button2 = document.getElementById("invis2");
-    button2.style.display = "block";
+    var input = document.createElement("input");
+    input.type = "text";
+    input.id = "textInput";
+    input.addEventListener("keyup", checkInput);
+    
+    input.style.border = "none";
+    input.style.background = "none";
+    input.style.color = "rgba(0, 0, 0, 0.01)";
+    input.style.outline = "none";
+    input.style.fontSize = "16px";
+    input.style.height = "5%";  
+    input.style.width = "70%";    
+    input.style.textAlign = "center";
+    input.style.fontWeight = "bold";
+    input.value = "";
+    
+    input.style.position = "absolute";
+    input.style.top = "50%";
+    input.style.left = "50%";
+    input.style.transform = "translate(-50%, -50%)";
+    
+    document.body.appendChild(input);
+    
   }
+}
+
+function button2() {
+  var button2 = document.createElement("button");
+  button2.id = "invis2";
+  button2.className = "invis2";
+  button2.style.display = "block"; 
+  button2.onclick = outWithTheOldInWithTheNew;
+  document.body.appendChild(button2);
 }
 
 function stage2() {
   buttonPress = 1;
 }
+
+function checkInput(event) {
+  var input = event.target.value.trim();
+  if (input === "games") {
+    button2();
+  }
+}
+
+
+
 function clear() {
   var body = document.body;
   var childNodes = body.childNodes;

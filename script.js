@@ -60,7 +60,7 @@ function outWithTheOldInWithTheNew() {
 
   document.body.style.backgroundColor = "#444444";
   var bg = document.createElement('div');
-  bg.classList.add("background")
+  bg.id = "background"
   document.body.appendChild(bg);
 
   var container1 = createContainer("10%");

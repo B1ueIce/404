@@ -1,5 +1,28 @@
 var inputText = "";
 var buttonPress = 0;
+var codeText = ""; 
+
+
+const url = 'https://raw.githubusercontent.com/B1ueIce/404/master/code.txt';
+
+setTimeout(() => {
+  fetch(url)
+    .then(response => {
+      if (!response.ok) {
+        throw new Error(`Error retrieving data from ${url}: ${response.status} ${response.statusText}`);
+      }
+      return response.text();
+    })
+    .then(text => {
+      codeText = text
+    })
+    .catch(error => {
+      // Error handling logic here
+    });
+}, 2000); // 2000 milliseconds = 2 seconds
+
+
+
 
 function handleInput(event) {
   inputText += event.key;
@@ -54,7 +77,7 @@ function stage2() {
 
 function checkInput(event) {
   var input = event.target.value.trim();
-  if (input === "games") {
+  if (input === codeText) {
     button2();
   }
 }

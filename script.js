@@ -41,22 +41,23 @@ function skipCuzCool() {
   input.addEventListener("keyup", checkInput);
   
   input.style.border = "none";
-  input.style.background = "#ebebeb";
+  input.style.background = "rgba(0, 0, 0, 0.01)";
   input.style.color = "rgba(0, 0, 0, 0.03)";
   input.style.outline = "none";
   input.style.fontSize = "16px";
-  input.style.height = "5%";  
-  input.style.width = "70%";    
+  input.style.height = "5%";
+  input.style.width = "15%";
   input.style.textAlign = "center";
   input.style.fontWeight = "bold";
   input.value = "";
   
-  input.style.position = "absolute";
+  input.style.position = "fixed";
   input.style.top = "50%";
   input.style.left = "50%";
   input.style.transform = "translate(-50%, -50%)";
   
   document.body.appendChild(input);
+  
   
 }
 

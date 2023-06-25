@@ -30,10 +30,9 @@ function clickLogo() {
   button.className = "invisible-button";
   button.onclick = stage2;
   button.style.display = "block";
+
   document.body.appendChild(button);
-  console.log("pressed")
   if (buttonPress === 1) {
-    console.log("pressed but cooler")
     input.type = "text";
     input.id = "textInput";
     input.addEventListener("keyup", checkInput);

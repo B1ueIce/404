@@ -59,9 +59,6 @@ function skipCuzCool() {
   document.body.appendChild(input);
   
 }
-const logoButton = document.querySelector('.logo.logo-img-1x');
-
-logoButton.addEventListener('click', clickLogo);
 
 
 function handleInput(event) {

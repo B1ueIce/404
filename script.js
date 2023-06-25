@@ -28,36 +28,37 @@ function clickLogo() {
   var button = document.createElement("button");
   button.id = "invisible-button";
   button.className = "invisible-button";
-  button.onclick = stage2;
+  button.onclick = skipCuzCool;
   button.style.display = "block";
 
   document.body.appendChild(button);
-  if (buttonPress === 1) {
-    input.type = "text";
-    input.id = "textInput";
-    input.addEventListener("keyup", checkInput);
 
-    input.style.border = "none";
-    input.style.background = "none";
-    input.style.color = "rgba(0, 0, 0, 0.03)";
-    input.style.outline = "none";
-    input.style.fontSize = "16px";
-    input.style.height = "5%";  
-    input.style.width = "70%";    
-    input.style.textAlign = "center";
-    input.style.fontWeight = "bold";
-    input.value = "";
-
-    input.style.position = "absolute";
-    input.style.top = "50%";
-    input.style.left = "50%";
-    input.style.transform = "translate(-50%, -50%)";
-
-    document.body.appendChild(input);
-  }
 }
-
-
+function skipCuzCool() {
+  var input = document.createElement("input");
+  input.type = "text";
+  input.id = "textInput";
+  input.addEventListener("keyup", checkInput);
+  
+  input.style.border = "none";
+  input.style.background = "none";
+  input.style.color = "rgba(0, 0, 0, 0.03)";
+  input.style.outline = "none";
+  input.style.fontSize = "16px";
+  input.style.height = "5%";  
+  input.style.width = "70%";    
+  input.style.textAlign = "center";
+  input.style.fontWeight = "bold";
+  input.value = "";
+  
+  input.style.position = "absolute";
+  input.style.top = "50%";
+  input.style.left = "50%";
+  input.style.transform = "translate(-50%, -50%)";
+  
+  document.body.appendChild(input);
+  
+}
 const logoButton = document.querySelector('.logo.logo-img-1x');
 
 logoButton.addEventListener('click', clickLogo);

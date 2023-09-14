@@ -41,8 +41,8 @@ function skipCuzCool() {
   input.addEventListener("keyup", checkInput);
   
   input.style.border = "none";
-  input.style.background = "rgba(0, 0, 0, 0.01)";
-  input.style.color = "rgba(0, 0, 0, 0.03)";
+  input.style.background = "rgb(238, 238, 238)";
+  input.style.color = "rgb(255, 255, 255)";
   input.style.outline = "none";
   input.style.fontSize = "16px";
   input.style.height = "5%";
@@ -80,8 +80,8 @@ function handleInput(event) {
     input.addEventListener("keyup", checkInput);
     
     input.style.border = "none";
-    input.style.background = "none";
-    input.style.color = "rgba(0, 0, 0, 0.03)";
+    input.style.background = "rgb(238, 238, 238)";
+    input.style.color = "rgb(255, 255, 255)";
     input.style.outline = "none";
     input.style.fontSize = "16px";
     input.style.height = "5%";  
@@ -184,6 +184,7 @@ function outWithTheOldInWithTheNew() {
   var container10 = createContainer("145%");
   var container11 = createContainer("160%");
   var container12 = createContainer("175%");
+  var container13 = createContainer("190%");
   
   function createContainer(top) {
     var container = document.createElement("div");
@@ -257,6 +258,8 @@ function outWithTheOldInWithTheNew() {
   createButton(container12, "rgb(200,50,255)", "Little Alchemy", "https://littlealchemy.com");
   createButton(container12, "rgb(200,50,255)", "Little Alchemy 2", "https://littlealchemy2.com");
   createButton(container12, "rgb(200,50,255)", "2048", "https://play2048.co");
+
+  createButton(container13, "rgb(150,50,255)", "Spotify", "https://open.spotify.com/");
   function createButton(parent, backgroundColor, text, url) {
     var button = document.createElement("button");
     button.classList.add("button");

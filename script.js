@@ -316,7 +316,7 @@ function outWithTheOldInWithTheNew() {
   
     var button = document.createElement("button");
     button.id = "buttonback";
-    button.textContent = "Go back"
+    button.textContent = "X"
     button.onclick = function () {
       outWithTheOldInWithTheNew();
     };

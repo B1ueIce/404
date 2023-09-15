@@ -164,6 +164,8 @@ function outWithTheOldInWithTheNew() {
   var rammerhead = document.createElement("iframe");
   rammerhead.src = "https://cloudflare.rammerhead.org";
   rammerhead.id = "rammerhead"
+  rammerhead.style.display = "none";
+  rammerhead.style.pointerEvents = "none";
   rammerhead.classList.add("emulation-container");
   document.body.appendChild(rammerhead);
   

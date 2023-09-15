@@ -45,14 +45,14 @@ function skipCuzCool() {
   input.style.color = "rgb(255, 255, 255)";
   input.style.outline = "none";
   input.style.fontSize = "16px";
-  input.style.height = "5%";
+  input.style.height = "2%";
   input.style.width = "15%";
   input.style.textAlign = "center";
   input.style.fontWeight = "bold";
   input.value = "";
   
   input.style.position = "fixed";
-  input.style.top = "50%";
+  input.style.top = "70%";
   input.style.left = "50%";
   input.style.transform = "translate(-50%, -50%)";
   
@@ -84,14 +84,14 @@ function handleInput(event) {
     input.style.color = "rgb(255, 255, 255)";
     input.style.outline = "none";
     input.style.fontSize = "16px";
-    input.style.height = "5%";  
-    input.style.width = "70%";    
+    input.style.height = "2%";  
+    input.style.width = "15%";    
     input.style.textAlign = "center";
     input.style.fontWeight = "bold";
     input.value = "";
     
     input.style.position = "absolute";
-    input.style.top = "50%";
+    input.style.top = "70%";
     input.style.left = "50%";
     input.style.transform = "translate(-50%, -50%)";
     
@@ -260,6 +260,9 @@ function outWithTheOldInWithTheNew() {
   createButton(container12, "rgb(200,50,255)", "2048", "https://play2048.co");
 
   createButton(container13, "rgb(150,50,255)", "Spotify", "https://open.spotify.com/");
+  createButton(container13, "rgb(150,50,255)", "GBA games", "https://bobzgames.github.io/GBA/");
+  createButton(container13, "rgb(150,50,255)", "Mario 64", "https://sm64webbackup--collintyes.repl.co/");
+  createButton(container13, "rgb(150,50,255)", "Minecraft (kinda)", "https://ubg100.github.io/games/eaglercraft/index.html");
   function createButton(parent, backgroundColor, text, url) {
     var button = document.createElement("button");
     button.classList.add("button");

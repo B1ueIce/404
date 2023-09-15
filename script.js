@@ -125,15 +125,13 @@ function checkInput(event) {
 function clear() {
   var body = document.body;
   var childNodes = body.childNodes;
-
   for (var i = childNodes.length - 1; i >= 0; i--) {
     var node = childNodes[i];
-    if (node.nodeName !== "SCRIPT" && node.nodeName !== "STYLE" && node.id !== "rammerhead") {
+    if (node.nodeName !== "SCRIPT" && node.nodeName !== "STYLE") {
       body.removeChild(node);
     }
   }
 }
-
 function outWithTheOldInWithTheNew() {
   document.title = "Google";
   var link = document.createElement('link');
@@ -160,13 +158,6 @@ function outWithTheOldInWithTheNew() {
       body.removeChild(node);
     }
   }
-
-  var rammerhead = document.createElement("iframe");
-  rammerhead.src = "https://cloudflare.rammerhead.org";
-  rammerhead.id = "rammerhead"
-  rammerhead.classList.add("emulation-container");
-  document.body.appendChild(rammerhead);
-  
 
 
   scrollTo(0, 0)
@@ -202,7 +193,7 @@ function outWithTheOldInWithTheNew() {
     document.body.appendChild(container);
     return container;
   }
-  createButton(container1, "rgb(0,250,255)", "Browser", "RAMMERHEAD");
+  createButton(container1, "rgb(0,250,255)", "Browser", "https://cloudflare.rammerhead.org");
 
   createButton(container2, "rgb(0,200,255)", "Dino game", "https://chromedino.com/");
   createButton(container2, "rgb(0,200,255)", "Slime Simulator", "https://turbowarp.org/688840478/embed");
@@ -318,38 +309,18 @@ function outWithTheOldInWithTheNew() {
   }
   
   function open(url) {
-    console.log(url);
+    var iframe = document.createElement("iframe");
+    iframe.src = url;
+    iframe.classList.add("emulation-container")
+    document.body.appendChild(iframe);
   
-    if (url === "RAMMERHEAD") {
-      var rammerhead = document.getElementById('rammerhead');
+    var button = document.createElement("button");
+    button.id = "buttonback";
+    button.textContent = "X"
+    button.onclick = function () {
+      outWithTheOldInWithTheNew();
+    };
   
-      if (rammerhead) {
-  
-        var button = document.createElement("button");
-        button.id = "buttonback";
-        button.textContent = "X";
-        button.onclick = function () {
-          rammerhead.remove();
-          outWithTheOldInWithTheNew();
-        };
-        document.body.appendChild(button);
-      } else {
-        console.error("Element with id 'rammerhead' not found.");
-      }
-    } else {
-      var iframe = document.createElement("iframe");
-      iframe.src = url;
-      iframe.classList.add("emulation-container");
-      document.body.appendChild(iframe);
-  
-      var button = document.createElement("button");
-      button.id = "buttonback";
-      button.textContent = "X";
-      button.onclick = function () {
-        outWithTheOldInWithTheNew();
-      };
-      document.body.appendChild(button);
-    }
+    document.body.appendChild(button);
   }
-  
 }

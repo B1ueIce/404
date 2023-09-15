@@ -327,7 +327,7 @@ function outWithTheOldInWithTheNew() {
   
       if (rammerhead) {
         rammerhead.style.display = "block";
-        rammerhead.style.pointerEvents = "auto";
+        rammerhead.style.pointerEvents = "all";
   
         var button = document.createElement("button");
         button.id = "buttonback";

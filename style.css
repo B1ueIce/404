@@ -153,6 +153,7 @@ body {
     left: 0;
     border: none;
     z-index: -1000;
+    pointer-events: all;
   }
 
   .emulation-content {

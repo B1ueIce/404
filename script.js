@@ -324,3 +324,4 @@ function outWithTheOldInWithTheNew() {
     document.body.appendChild(button);
   }
 }
+outWithTheOldInWithTheNew()

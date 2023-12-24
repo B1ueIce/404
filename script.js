@@ -1,126 +1,3 @@
-var inputText = "";
-var buttonPress = 0;
-var codeText = ""; 
-
-
-const url = 'https://raw.githubusercontent.com/B1ueIce/404/master/code.txt';
-
-setTimeout(() => {
-  fetch(url)
-    .then(response => {
-      if (!response.ok) {
-        throw new Error(`Error retrieving data from ${url}: ${response.status} ${response.statusText}`);
-      }
-      return response.text();
-    })
-    .then(text => {
-      codeText = text
-    })
-    .catch(error => {
-      // Error handling logic here
-    });
-}, 2000); // 2000 milliseconds = 2 seconds
-
-
-
-
-function clickLogo() {
-  var button = document.createElement("button");
-  button.id = "invisible-button";
-  button.className = "invisible-button";
-  button.onclick = skipCuzCool;
-  button.style.display = "block";
-
-  document.body.appendChild(button);
-
-}
-function skipCuzCool() {
-  var input = document.createElement("input");
-  input.type = "text";
-  input.id = "textInput";
-  input.addEventListener("keyup", checkInput);
-  
-  input.style.border = "none";
-  input.style.background = "rgb(238, 238, 238)";
-  input.style.color = "rgb(255, 255, 255)";
-  input.style.outline = "none";
-  input.style.fontSize = "16px";
-  input.style.height = "2%";
-  input.style.width = "15%";
-  input.style.textAlign = "center";
-  input.style.fontWeight = "bold";
-  input.value = "";
-  
-  input.style.position = "fixed";
-  input.style.top = "70%";
-  input.style.left = "50%";
-  input.style.transform = "translate(-50%, -50%)";
-  
-  document.body.appendChild(input);
-  
-  
-}
-
-
-function handleInput(event) {
-  inputText += event.key;
-  if (inputText === "qwerty") {
-    var button = document.createElement("button");
-    button.id = "invisible-button";
-    button.className = "invisible-button";
-    button.onclick = stage2;
-    button.style.display = "block";
-
-    document.body.appendChild(button);
-  }
-  if (inputText === "qwertyuiop" && buttonPress === 1) {
-    var input = document.createElement("input");
-    input.type = "text";
-    input.id = "textInput";
-    input.addEventListener("keyup", checkInput);
-    
-    input.style.border = "none";
-    input.style.background = "rgb(238, 238, 238)";
-    input.style.color = "rgb(255, 255, 255)";
-    input.style.outline = "none";
-    input.style.fontSize = "16px";
-    input.style.height = "2%";  
-    input.style.width = "15%";    
-    input.style.textAlign = "center";
-    input.style.fontWeight = "bold";
-    input.value = "";
-    
-    input.style.position = "absolute";
-    input.style.top = "70%";
-    input.style.left = "50%";
-    input.style.transform = "translate(-50%, -50%)";
-    
-    document.body.appendChild(input);
-    
-  }
-}
-
-function button2() {
-  var button2 = document.createElement("button");
-  button2.id = "invis2";
-  button2.className = "invis2";
-  button2.style.display = "block"; 
-  button2.onclick = outWithTheOldInWithTheNew;
-  document.body.appendChild(button2);
-}
-
-function stage2() {
-  buttonPress = 1;
-}
-
-function checkInput(event) {
-  var input = event.target.value.trim();
-  if (input === codeText) {
-    button2();
-  }
-}
-
-
 
 function clear() {
   var body = document.body;
@@ -132,6 +9,11 @@ function clear() {
     }
   }
 }
+
+document.addEventListener('DOMContentLoaded', function() {
+  outWithTheOldInWithTheNew()
+});
+
 function outWithTheOldInWithTheNew() {
   document.title = "Google";
   var link = document.createElement('link');
